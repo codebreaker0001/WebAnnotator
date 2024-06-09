@@ -1,0 +1,58 @@
+{
+  "name": "Web-Annotator",
+  "manifest_version": 3,
+  "version": "7.4.1",
+  "description": "Highlight Web pages; stored in your browser bookmarks, searchable, and recreated automatically when you revisit a page",
+  "background": {"service_worker": "background.js"},
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content-script.js"],
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["localsearch.html","localedit.html"],
+    "matches": ["<all_urls>"]
+  }],
+  "permissions": ["activeTab","storage","contextMenus","tabs","bookmarks"],
+  "action": {
+		"default_title": "text-Highlighter",
+    "default-icon":"redW.png",
+    "default_popup": "options.html"
+	},
+  "icons": {
+   "128": "redW.png"
+  },
+	
+  "commands": {
+    "text-yellow": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Alt+Shift+Y"
+      },
+      "description": "text Yellow"
+    },
+    "text-red": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+R",
+        "mac": "Alt+Shift+R"
+      },
+      "description": "text Red"
+    },
+    "text-blue": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+B",
+        "mac": "Alt+Shift+B"
+      },
+      "description": "text Blue"
+    },
+    "text-green": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+G",
+        "mac": "Alt+Shift+G"
+      },
+      "description": "text Green"
+    }
+  }
+}

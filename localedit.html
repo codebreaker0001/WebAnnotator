@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<title>Edit</title>
+
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-rose-500 bg-cover " style="background-image: url('./rm209-ning-20.jpg');" >
+<div id="error"></div>
+<div class="flex justify-center gap-4 mt-4" >
+  <form class="flex flex-col justify-center items-center">
+    <label class="bg-red-700 w-1/2 flex justify-center text-4xl text-white rounded-lg ">Title</label><BR><input  type='text' id='title' autofocus autocorrect="off" autocapitalize="off" spellcheck="false" size="100" 
+       type="text" 
+      class="w-full text-2xl px-4 py-2 bg-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 "><BR>
+    <!--label>Labels</label><BR><input size=60 type='text' id='labels'><BR-->
+    <label class="bg-red-700 w-1/2 flex justify-center text-4xl text-white rounded-lg "  >Highlights</label><BR><textarea cols=60 rows=8 id='annotations' class="w-full text-2xl px-4 py-2 bg-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-lg" ></textarea><BR>
+    <button id='save' class="bg-red-700 w-1/4 flex justify-center text-2xl text-white rounded-lg ">Save and close</button>
+    </form>
+</div>
+<script src='localedit.js'></script>
+</body>
+</html>
